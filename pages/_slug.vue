@@ -25,11 +25,16 @@ export default {
 
 <style>
 #post img {
-    width: 100%;
+    width: 49.7%;
 }
 #post p {
     font-size: 20px;
     margin-block-end: 10px;
     margin-block-start: 10px;
+}
+@media screen and (max-width: 800px) {
+    #post img {
+        width: 100%;
+    }
 }
 </style>
