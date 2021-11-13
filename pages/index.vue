@@ -15,7 +15,7 @@
 export default {
     data() {
         return {
-            categories: []
+            categories: [" "]
         }
     },
     async asyncData({ $content }) {
@@ -80,6 +80,7 @@ export default {
 }
 .categories {
     width: 100%;
+    min-height: 28px;
 }
 .categories p {
     display: inline-block;
