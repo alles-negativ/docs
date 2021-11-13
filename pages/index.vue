@@ -1,7 +1,7 @@
 <template>
     <div id="content">
         <div class="post" v-for="post of posts" :key="post.slug">
-            <NuxtLink :to="'/' + post.slug">{{ post.title + " / " + $moment(post.date).format("DD.MM.YYYY") }}</NuxtLink>
+            <NuxtLink :to="'/' + post.slug">{{ post.project.toUpperCase() + ": " + post.title + " / " + $moment(post.date).format("DD.MM.YYYY") }}</NuxtLink>
         </div>
     </div>
 </template>

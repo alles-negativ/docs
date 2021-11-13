@@ -1,6 +1,6 @@
 ---
 title: Any Article
-project: Streamline
+project: STREAMLINE
 date: 2021-11-13T15:40:21.705Z
 description: blabla
 ---
