@@ -9,7 +9,7 @@
 <script>
 export default {
     async asyncData({ $content }) {
-        const posts = await $content("blog").sortBy('date').fetch();
+        const posts = await $content("blog").sortBy('date', 'desc').fetch();
 
         return {
             posts,
