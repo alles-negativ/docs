@@ -23,6 +23,7 @@ export default {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
+    margin-top: 10px;
 }
 .post {
     display: flex;

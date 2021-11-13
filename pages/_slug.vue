@@ -27,4 +27,9 @@ export default {
 #post img {
     width: 100%;
 }
+#post p {
+    font-size: 20px;
+    margin-block-end: 10px;
+    margin-block-start: 10px;
+}
 </style>
