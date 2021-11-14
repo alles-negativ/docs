@@ -7,9 +7,9 @@
 </template>
 
 <style>
-#header {
-    /* border-bottom: solid 2px; */
-}
+/* #header {
+    border-bottom: solid 2px;
+} */
 #header h1 {
     font-style: italic;
     text-decoration: none;
