@@ -1,7 +1,7 @@
 <template>
     <div id="content">
         <div class="categories">
-            <p v-for="categorie of categories" :key="categorie.id" @click="getSelection(categorie, $event)">
+            <p v-for="categorie of categories" :key="categorie.id" :class="{'active': active == categorie}" @click="getSelection(categorie, $event)">
                 {{ categorie }}
             </p>
         </div>
@@ -15,7 +15,8 @@
 export default {
     data() {
         return {
-            categories: [" "]
+            categories: [],
+            active: "all"
         }
     },
     async asyncData({ $content }) {
@@ -36,10 +37,11 @@ export default {
             this.categories = output
         },
         getSelection: async function(categorie, event) {
-            document.querySelectorAll(".categories p").forEach(element => {
-                element.classList.remove("active")
-            });
-            event.target.className = "active"
+            // document.querySelectorAll(".categories p").forEach(element => {
+            //     element.classList.remove("active")
+            // });
+            // event.target.className = "active"
+            this.active = categorie
             if (categorie != "all") {
                 this.posts = await this.$content("blog").where({ project: categorie }).sortBy('date', 'desc').fetch();
             } else {
